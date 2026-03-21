@@ -1,0 +1,266 @@
+# Python
+
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+
+# Virtual Environments
+
+venv/
+.venv
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# Node.js / Frontend
+
+node_modules/
+npm-debug.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+frontend/build/
+frontend/dist/
+
+
+# IDE & Editor
+
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+.project
+.pydevproject
+.settings/
+*.sublime-project
+*.sublime-workspace
+.vim/
+.emacs.d/
+*.iml
+
+
+# OS Files
+
+.DS_Store
+Thumbs.db
+Desktop.ini
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+
+
+# Data Files
+
+data/raw/*
+!data/raw/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+*.csv
+*.xlsx
+*.xls
+*.db
+*.sqlite3
+medicaltranscriptions.zip
+
+
+# Results & Output
+
+results/*
+!results/.gitkeep
+results/logs/*
+!results/logs/.gitkeep
+output/
+outputs/
+*.json
+!package.json
+
+
+# Environment Variables
+
+.env
+.env.local
+.env.*.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env.example
+
+# Logs
+
+*.log
+logs/
+*.log.*
+
+# Temporary Files
+
+*.tmp
+*.temp
+*.cache
+.cache/
+.pytest_cache/
+.jupyter_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+dist/
+build/
+
+
+# Jupyter Notebooks
+
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+
+kaggle/kaggle.json
+~/.kaggle/
+
+
+# Docker
+
+docker-compose.override.yml
+.dockerignore
+
+# Git
+
+.git/
+.gitkeep
+
+# Misc
+
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.prettierignore
+.eslintignore
+*.bak
+*.backup
+*.orig
+
+
+
+# Windows
+
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+
+# =====================
+# Test Coverage
+# =====================
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.hypothesis/
+
+
+# Type Checking
+
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+
+# Environment Specific
+
+.env.production
+.env.staging
+.secrets/
+credentials.json
+service-account.json
+
+# Large Files
+
+*.zip
+*.tar
+*.tar.gz
+*.rar
+*.7z
+
+#vs code
+
+.vscode-server/
+.vscode-server-insiders/
+*.pid
+*.seed
+*.pid.lock
+
+
+# Frontend Specific
+
+frontend/.cache/
+frontend/dist/
+frontend/.env.local
+frontend/.env.*.local
+frontend/npm-debug.log
+
+# Backend Specific
+
+backend/.env
+backend/logs/
+backend/*.db
+backend/.pytest_cache/
+
+
+
+# API Keys & Secrets
+
+.env
+.env.local
+secrets.json
+credentials.json
+api_keys.json
+.aws/
+.gcloud/
+
+
+# Compiled Files
+
+*.o
+*.a
+*.so
+*.dylib
+*.exe
+*.bin
+
+
+# IDE Workspace Settings
+
+.vscode/settings.json
+.idea/workspace.xml
+.idea/vcs.xml
