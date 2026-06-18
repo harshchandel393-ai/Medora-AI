@@ -11,6 +11,251 @@ const SEVERITY_COLORS = {
   Unknown: '#6B7280',
 };
 
+// ---------- Styles (Updated to Indigo/Sky-Blue theme) ----------
+const styles = {
+  container: {
+    minHeight: '100vh',
+    background: 'linear-gradient(145deg, #F0F4FF 0%, #E6EEFE 100%)',
+    fontFamily: "'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+    color: '#1E293B',
+    display: 'flex',
+    flexDirection: 'column',
+  },
+
+  header: {
+    background: 'linear-gradient(135deg, #4F46E5 0%, #0EA5E9 100%)',
+    padding: '48px 20px 40px',
+    textAlign: 'center',
+    boxShadow: '0 8px 32px rgba(79,70,229,0.25)',
+    position: 'relative',
+    overflow: 'hidden',
+  },
+  headerContent: {
+    maxWidth: '1100px',
+    margin: '0 auto',
+    position: 'relative',
+    zIndex: 2,
+  },
+  badge: {
+    display: 'inline-block',
+    background: 'rgba(255,255,255,0.2)',
+    backdropFilter: 'blur(4px)',
+    color: 'white',
+    padding: '6px 20px',
+    borderRadius: '40px',
+    fontSize: '0.75rem',
+    fontWeight: 600,
+    letterSpacing: '0.5px',
+    marginBottom: '16px',
+    textTransform: 'uppercase',
+  },
+  title: {
+    margin: '0 0 8px 0',
+    fontSize: 'clamp(2.2rem, 6vw, 3.5rem)',
+    fontWeight: 700,
+    letterSpacing: '-0.02em',
+    color: 'white',
+    textShadow: '0 2px 12px rgba(0,0,0,0.08)',
+  },
+  subtitle: {
+    margin: 0,
+    fontSize: 'clamp(0.9rem, 1.2vw, 1.1rem)',
+    opacity: 0.92,
+    color: 'white',
+    maxWidth: '650px',
+    marginInline: 'auto',
+    fontWeight: 400,
+  },
+
+  content: {
+    maxWidth: '1100px',
+    margin: '0 auto',
+    padding: '32px 20px',
+    flex: 1,
+    width: '100%',
+  },
+
+  section: {
+    background: 'rgba(255,255,255,0.75)',
+    backdropFilter: 'blur(8px)',
+    borderRadius: '24px',
+    padding: '32px 28px',
+    marginBottom: '28px',
+    boxShadow: '0 4px 24px rgba(79,70,229,0.06), 0 1px 4px rgba(79,70,229,0.04)',
+    border: '1px solid rgba(255,255,255,0.7)',
+    transition: 'box-shadow 0.3s ease',
+  },
+  sectionTitle: {
+    margin: '0 0 6px 0',
+    fontSize: '1.5rem',
+    fontWeight: 700,
+    letterSpacing: '-0.01em',
+    color: '#0F172A',
+  },
+  sectionSubtitle: {
+    margin: '0 0 24px 0',
+    color: '#64748B',
+    fontSize: '0.95rem',
+    lineHeight: 1.5,
+  },
+  code: {
+    background: '#EEF2FF',
+    padding: '2px 8px',
+    borderRadius: '6px',
+    fontSize: '0.8rem',
+    fontFamily: 'monospace',
+    color: '#4F46E5',
+  },
+
+  examplesRow: {
+    display: 'flex',
+    gap: '10px',
+    alignItems: 'center',
+    flexWrap: 'wrap',
+    marginBottom: '24px',
+  },
+  examplesLabel: {
+    color: '#64748B',
+    fontSize: '0.75rem',
+    fontWeight: 600,
+    textTransform: 'uppercase',
+    letterSpacing: '0.4px',
+  },
+
+  inputGroup: {
+    marginBottom: '22px',
+    position: 'relative',
+  },
+  label: {
+    display: 'block',
+    marginBottom: '6px',
+    fontWeight: 600,
+    fontSize: '0.85rem',
+    color: '#334155',
+    letterSpacing: '0.2px',
+  },
+
+  suggestions: {
+    position: 'absolute',
+    top: 'calc(100% + 6px)',
+    left: 0,
+    right: 0,
+    background: 'white',
+    border: '1px solid #E2E8F0',
+    borderRadius: '12px',
+    boxShadow: '0 12px 40px rgba(79,70,229,0.12)',
+    zIndex: 20,
+    maxHeight: '280px',
+    overflowY: 'auto',
+    padding: '4px 0',
+  },
+  suggestionMeta: {
+    color: '#64748B',
+    fontSize: '0.75rem',
+    fontWeight: 500,
+  },
+
+  actionBar: {
+    display: 'flex',
+    gap: '14px',
+    alignItems: 'center',
+    marginTop: '8px',
+    flexWrap: 'wrap',
+  },
+
+  errorBox: {
+    background: '#FEF2F2',
+    color: '#991B1B',
+    border: '1px solid #FECACA',
+    padding: '14px 18px',
+    borderRadius: '12px',
+    marginTop: '16px',
+    fontSize: '0.9rem',
+  },
+
+  summaryHeader: {
+    display: 'grid',
+    gridTemplateColumns: 'repeat(auto-fit, minmax(160px, 1fr))',
+    gap: '16px',
+    marginBottom: '28px',
+  },
+
+  tabs: {
+    display: 'flex',
+    gap: '4px',
+    borderBottom: '2px solid #E2E8F0',
+    marginBottom: '24px',
+    overflowX: 'auto',
+  },
+
+  card: {
+    background: '#FAFBFF',
+    borderRadius: '16px',
+    padding: '24px',
+    border: '1px solid #E2E8F0',
+    borderLeft: '4px solid #4F46E5',
+  },
+  cardTitle: {
+    margin: '0 0 16px 0',
+    fontSize: '1.1rem',
+    fontWeight: 700,
+    color: '#0F172A',
+  },
+  row: {
+    display: 'flex',
+    gap: '12px',
+    padding: '8px 0',
+    borderBottom: '1px dashed #E2E8F0',
+    alignItems: 'baseline',
+  },
+  rowLabel: {
+    width: '160px',
+    color: '#64748B',
+    fontSize: '0.85rem',
+    fontWeight: 600,
+    flexShrink: 0,
+  },
+  rowValue: {
+    flex: 1,
+    color: '#0F172A',
+    fontSize: '0.9rem',
+  },
+  list: {
+    margin: '6px 0 6px 20px',
+    padding: 0,
+    color: '#1E293B',
+    fontSize: '0.9rem',
+  },
+
+  rawBlock: {
+    marginTop: '20px',
+    cursor: 'pointer',
+  },
+  pre: {
+    background: '#F1F5F9',
+    padding: '16px',
+    borderRadius: '12px',
+    overflow: 'auto',
+    fontSize: '0.8rem',
+    lineHeight: 1.5,
+    border: '1px solid #E2E8F0',
+    color: '#0F172A',
+    maxHeight: '400px',
+  },
+
+  footer: {
+    textAlign: 'center',
+    padding: '20px',
+    color: '#94A3B8',
+    fontSize: '0.8rem',
+    borderTop: '1px solid #E2E8F0',
+    background: 'rgba(255,255,255,0.6)',
+    backdropFilter: 'blur(4px)',
+    marginTop: 'auto',
+  },
+};
+
+// ---------- Main Component ----------
 const Dashboard = () => {
   const [disease, setDisease] = useState('');
   const [symptomsText, setSymptomsText] = useState('');
@@ -24,7 +269,6 @@ const Dashboard = () => {
   const [diseases, setDiseases] = useState([]);
   const [suggestions, setSuggestions] = useState([]);
 
-  // Load disease list once for the autocomplete dropdown.
   useEffect(() => {
     let cancelled = false;
     (async () => {
@@ -35,14 +279,12 @@ const Dashboard = () => {
           setDiseases(data.diseases || []);
         }
       } catch (err) {
-        // Non-fatal – suggestions will simply be empty.
         console.warn('Could not load disease list:', err.message);
       }
     })();
     return () => { cancelled = true; };
   }, []);
 
-  // Live fuzzy search through the loaded disease list.
   useEffect(() => {
     const q = disease.trim().toLowerCase();
     if (!q) {
@@ -126,10 +368,12 @@ const Dashboard = () => {
 
   return (
     <div style={styles.container}>
-      <header style={styles.header}>
+      <header style={styles.header} className="animate-fade-up">
         <div style={styles.headerContent}>
-          <span style={styles.badge}>AI-Powered · ML-Driven</span>
-          <h1 style={styles.title}>Clinical Sense</h1>
+          <span style={styles.badge} className="pulse-badge">
+            AI-Powered · ML-Driven
+          </span>
+          <h1 style={styles.title}>Medora AI</h1>
           <p style={styles.subtitle}>
             Multi-agent disease → risk → medication recommender (Random Forest + Gradient Boosting + KMeans)
           </p>
@@ -137,7 +381,8 @@ const Dashboard = () => {
       </header>
 
       <main style={styles.content}>
-        <section style={styles.section}>
+        {/* Input Section - Entrance Animation */}
+        <section style={styles.section} className="animate-fade-up delay-100">
           <h2 style={styles.sectionTitle}>Patient Input</h2>
           <p style={styles.sectionSubtitle}>
             Provide a disease, a list of symptoms, or a free-text note. The system loads its knowledge from
@@ -146,13 +391,13 @@ const Dashboard = () => {
 
           <div style={styles.examplesRow}>
             <span style={styles.examplesLabel}>Try:</span>
-            <button onClick={() => handleExample('chest')} style={styles.exampleButton}>
+            <button onClick={() => handleExample('chest')} className="example-btn">
               Chest pain preset
             </button>
-            <button onClick={() => handleExample('diabetes')} style={styles.exampleButton}>
+            <button onClick={() => handleExample('diabetes')} className="example-btn">
               Diabetes preset
             </button>
-            <button onClick={() => handleExample('symptoms_only')} style={styles.exampleButton}>
+            <button onClick={() => handleExample('symptoms_only')} className="example-btn">
               Symptoms only
             </button>
           </div>
@@ -163,16 +408,16 @@ const Dashboard = () => {
               type="text"
               value={disease}
               onChange={(e) => setDisease(e.target.value)}
-              style={styles.input}
+              className="input-field"
               placeholder="e.g. Hypertension, Type 2 Diabetes, Pneumonia..."
               autoComplete="off"
             />
             {suggestions.length > 0 && (
-              <div style={styles.suggestions}>
+              <div style={styles.suggestions} className="suggestions-dropdown">
                 {suggestions.map(s => (
                   <button
                     key={s.disease}
-                    style={styles.suggestionItem}
+                    className="suggestion-item"
                     onClick={() => {
                       setDisease(s.disease);
                       setSuggestions([]);
@@ -193,7 +438,7 @@ const Dashboard = () => {
             <textarea
               value={symptomsText}
               onChange={(e) => setSymptomsText(e.target.value)}
-              style={styles.textarea}
+              className="input-field"
               placeholder="e.g. fever, cough, shortness of breath, fatigue"
               rows={3}
             />
@@ -204,7 +449,7 @@ const Dashboard = () => {
             <textarea
               value={medicationsText}
               onChange={(e) => setMedicationsText(e.target.value)}
-              style={styles.textarea}
+              className="input-field"
               placeholder="e.g. Lisinopril 10mg, Aspirin 81mg"
               rows={2}
             />
@@ -215,24 +460,36 @@ const Dashboard = () => {
             <textarea
               value={noteText}
               onChange={(e) => setNoteText(e.target.value)}
-              style={{ ...styles.textarea, minHeight: '110px' }}
+              className="input-field"
+              style={{ minHeight: '110px' }}
               placeholder="Free-form description of the patient presentation..."
             />
           </div>
 
           <div style={styles.actionBar}>
-            <button onClick={handleAnalyze} disabled={loading} style={styles.button}>
-              {loading ? 'Analyzing…' : 'Run Multi-Agent Analysis'}
+            <button
+              onClick={handleAnalyze}
+              disabled={loading}
+              className="primary-btn shimmer-on-hover"
+            >
+              {loading ? (
+                <>
+                  <span className="spinner" />
+                  Analyzing…
+                </>
+              ) : (
+                'Run Multi-Agent Analysis'
+              )}
             </button>
             {results && (
-              <button onClick={handleClear} style={styles.secondaryButton}>
+              <button onClick={handleClear} className="secondary-btn">
                 Clear
               </button>
             )}
           </div>
 
           {error && (
-            <div style={styles.errorBox}>
+            <div style={styles.errorBox} className="animate-fade-up">
               <strong>Error:</strong> {error}
             </div>
           )}
@@ -248,6 +505,7 @@ const Dashboard = () => {
   );
 };
 
+// ---------- ResultsView with Staggered Animations ----------
 const ResultsView = ({ results, activeTab, setActiveTab }) => {
   const analysis = results.workflow_stage_1_analysis || {};
   const risks = results.workflow_stage_2_risks || {};
@@ -259,50 +517,60 @@ const ResultsView = ({ results, activeTab, setActiveTab }) => {
   const severityColor = SEVERITY_COLORS[riskLevel] || SEVERITY_COLORS.Unknown;
 
   return (
-    <section style={styles.section}>
+    <section style={styles.section} className="animate-fade-up delay-200">
       <h2 style={styles.sectionTitle}>Analysis Results</h2>
 
+      {/* Staggered Summary Cards */}
       <div style={styles.summaryHeader}>
-        <SummaryCard
-          label="Predicted disease"
-          value={primary.disease || '—'}
-          sub={primary.specialty || ''}
-          color="#10B981"
-        />
-        <SummaryCard
-          label="Risk score"
-          value={risks.risk_score != null ? `${risks.risk_score} / 100` : '—'}
-          sub={riskLevel}
-          color={severityColor}
-        />
-        <SummaryCard
-          label="Urgency"
-          value={risks.urgency || '—'}
-          sub={risks.severity || ''}
-          color={severityColor}
-        />
-        <SummaryCard
-          label="Confidence"
-          value={`${Math.round((risks.confidence || 0) * 100)}%`}
-          sub="risk detector"
-          color="#3B82F6"
-        />
+        <div className="animate-fade-up delay-100" style={{ width: '100%' }}>
+          <SummaryCard
+            label="Predicted disease"
+            value={primary.disease || '—'}
+            sub={primary.specialty || ''}
+            color="#4F46E5"
+          />
+        </div>
+        <div className="animate-fade-up delay-200" style={{ width: '100%' }}>
+          <SummaryCard
+            label="Risk score"
+            value={risks.risk_score != null ? `${risks.risk_score} / 100` : '—'}
+            sub={riskLevel}
+            color={severityColor}
+          />
+        </div>
+        <div className="animate-fade-up delay-300" style={{ width: '100%' }}>
+          <SummaryCard
+            label="Urgency"
+            value={risks.urgency || '—'}
+            sub={risks.severity || ''}
+            color={severityColor}
+          />
+        </div>
+        <div className="animate-fade-up delay-400" style={{ width: '100%' }}>
+          <SummaryCard
+            label="Confidence"
+            value={`${Math.round((risks.confidence || 0) * 100)}%`}
+            sub="risk detector"
+            color="#0EA5E9"
+          />
+        </div>
       </div>
 
+      {/* Tabs */}
       <div style={styles.tabs}>
         {[
-          { id: 'analysis',   label: 'Clinical Analysis' },
-          { id: 'risk',       label: 'Risk Assessment' },
-          { id: 'drugs',      label: 'Drug Safety' },
-          { id: 'recommend',  label: 'Medication & Tests' },
+          { id: 'analysis', label: 'Clinical Analysis' },
+          { id: 'risk', label: 'Risk Assessment' },
+          { id: 'drugs', label: 'Drug Safety' },
+          { id: 'recommend', label: 'Medication & Tests' },
         ].map(tab => (
           <button
             key={tab.id}
             onClick={() => setActiveTab(tab.id)}
+            className="tab-btn"
             style={{
-              ...styles.tab,
-              borderBottomColor: activeTab === tab.id ? '#10B981' : 'transparent',
-              color: activeTab === tab.id ? '#10B981' : '#6B7280',
+              borderBottomColor: activeTab === tab.id ? '#4F46E5' : 'transparent',
+              color: activeTab === tab.id ? '#4F46E5' : '#64748B',
             }}
           >
             {tab.label}
@@ -310,123 +578,119 @@ const ResultsView = ({ results, activeTab, setActiveTab }) => {
         ))}
       </div>
 
-      <div style={styles.tabContent}>
-        {activeTab === 'analysis' && (
-          <Card title="Clinical Analysis">
-            <Row label="Symptoms identified" value={
-              (analysis.symptoms_identified || []).join(', ') || '—'
-            } />
-            <Row label="Primary disease" value={
-              primary.disease
-                ? `${primary.disease} (${primary.specialty})`
-                : '—'
-            } />
-            {primary.description && (
-              <Row label="Description" value={primary.description} />
-            )}
-            <Row label="Model" value={analysis.model_used || '—'} />
-            {analysis.alternative_diseases && analysis.alternative_diseases.length > 0 && (
+      {/* Tab Content with animation wrapper */}
+      <div className="tab-content-wrapper">
+        <div className="tab-content-inner">
+          {activeTab === 'analysis' && (
+            <Card title="Clinical Analysis">
+              <Row label="Symptoms identified" value={(analysis.symptoms_identified || []).join(', ') || '—'} />
+              <Row label="Primary disease" value={primary.disease ? `${primary.disease} (${primary.specialty})` : '—'} />
+              {primary.description && <Row label="Description" value={primary.description} />}
+              <Row label="Model" value={analysis.model_used || '—'} />
+              {analysis.alternative_diseases && analysis.alternative_diseases.length > 0 && (
+                <div>
+                  <strong>Alternative hypotheses:</strong>
+                  <ul style={styles.list}>
+                    {analysis.alternative_diseases.map(d => (
+                      <li key={d.disease}>
+                        {d.disease} — {(d.probability * 100).toFixed(1)}% (risk {d.risk_score})
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+              {analysis.cluster_related_diseases && analysis.cluster_related_diseases.length > 0 && (
+                <div>
+                  <strong>Cluster-related diseases (KMeans):</strong>
+                  <p>{analysis.cluster_related_diseases.join(', ')}</p>
+                </div>
+              )}
+              {analysis.disease_lookup && analysis.disease_lookup.found && (
+                <Row label="Lookup" value={`${analysis.disease_lookup.disease} found in dataset (severity ${analysis.disease_lookup.severity})`} />
+              )}
+              {analysis.disease_lookup && analysis.disease_lookup.found === false && (
+                <Row label="Lookup" value={`"${analysis.disease_lookup.query}" not found in dataset — using symptom model only`} />
+              )}
+              {analysis.patient_age && <Row label="Patient age" value={analysis.patient_age} />}
+              {analysis.patient_gender && <Row label="Patient gender" value={analysis.patient_gender} />}
+            </Card>
+          )}
+
+          {activeTab === 'risk' && (
+            <Card title="Risk Assessment">
+              <Row label="Risk score" value={`${risks.risk_score || 0} / 100`} />
+              <Row label="Risk level" value={risks.risk_level} />
+              <Row label="Urgency" value={risks.urgency} />
+              <Row label="Severity (dataset)" value={risks.severity || '—'} />
+              <Row label="Rationale" value={risks.rationale || '—'} />
+              <Row label="Confidence" value={`${Math.round((risks.confidence || 0) * 100)}%`} />
               <div>
-                <strong>Alternative hypotheses:</strong>
+                <strong>Critical flags:</strong>
                 <ul style={styles.list}>
-                  {analysis.alternative_diseases.map(d => (
-                    <li key={d.disease}>
-                      {d.disease} — {(d.probability * 100).toFixed(1)}% (risk {d.risk_score})
+                  {(risks.critical_flags || []).map((f, i) => <li key={i}>{f}</li>)}
+                </ul>
+              </div>
+            </Card>
+          )}
+
+          {activeTab === 'drugs' && (
+            <Card title="Drug Safety">
+              <Row label="Status" value={interactions.overall_status || '—'} />
+              <Row label="Medications reviewed" value={(interactions.medications_reviewed || []).join(', ') || '—'} />
+              <Row label="Total interactions" value={interactions.total_interactions ?? 0} />
+              {(interactions.interactions_found || []).length > 0 ? (
+                <ul style={styles.list}>
+                  {interactions.interactions_found.map((i, idx) => (
+                    <li key={idx}>
+                      <strong>{i.severity}:</strong> {i.drug_1} + {i.drug_2} → {i.effect}
                     </li>
                   ))}
                 </ul>
-              </div>
-            )}
-            {analysis.cluster_related_diseases && analysis.cluster_related_diseases.length > 0 && (
+              ) : (
+                <p>No major interactions detected.</p>
+              )}
+            </Card>
+          )}
+
+          {activeTab === 'recommend' && (
+            <Card title="Medication & Test Recommendations">
+              <Row label="Primary disease" value={recs.primary_disease || '—'} />
+              <Row label="Specialty" value={recs.specialty || '—'} />
+              {recs.description && <Row label="Description" value={recs.description} />}
               <div>
-                <strong>Cluster-related diseases (KMeans):</strong>
-                <p>{analysis.cluster_related_diseases.join(', ')}</p>
+                <strong>Suggested medications (from dataset):</strong>
+                <ul style={styles.list}>
+                  {(recs.suggested_medications || []).map((m, i) => <li key={i}>{m}</li>)}
+                </ul>
               </div>
-            )}
-            {analysis.disease_lookup && analysis.disease_lookup.found && (
-              <Row label="Lookup" value={`${analysis.disease_lookup.disease} found in dataset (severity ${analysis.disease_lookup.severity})`} />
-            )}
-            {analysis.disease_lookup && analysis.disease_lookup.found === false && (
-              <Row label="Lookup" value={`"${analysis.disease_lookup.query}" not found in dataset — using symptom model only`} />
-            )}
-            {analysis.patient_age && <Row label="Patient age" value={analysis.patient_age} />}
-            {analysis.patient_gender && <Row label="Patient gender" value={analysis.patient_gender} />}
-          </Card>
-        )}
-
-        {activeTab === 'risk' && (
-          <Card title="Risk Assessment">
-            <Row label="Risk score" value={`${risks.risk_score || 0} / 100`} />
-            <Row label="Risk level" value={risks.risk_level} />
-            <Row label="Urgency" value={risks.urgency} />
-            <Row label="Severity (dataset)" value={risks.severity || '—'} />
-            <Row label="Rationale" value={risks.rationale || '—'} />
-            <Row label="Confidence" value={`${Math.round((risks.confidence || 0) * 100)}%`} />
-            <div>
-              <strong>Critical flags:</strong>
-              <ul style={styles.list}>
-                {(risks.critical_flags || []).map((f, i) => <li key={i}>{f}</li>)}
-              </ul>
-            </div>
-          </Card>
-        )}
-
-        {activeTab === 'drugs' && (
-          <Card title="Drug Safety">
-            <Row label="Status" value={interactions.overall_status || '—'} />
-            <Row label="Medications reviewed" value={(interactions.medications_reviewed || []).join(', ') || '—'} />
-            <Row label="Total interactions" value={interactions.total_interactions ?? 0} />
-            {(interactions.interactions_found || []).length > 0 ? (
-              <ul style={styles.list}>
-                {interactions.interactions_found.map((i, idx) => (
-                  <li key={idx}>
-                    <strong>{i.severity}:</strong> {i.drug_1} + {i.drug_2} → {i.effect}
-                  </li>
-                ))}
-              </ul>
-            ) : (
-              <p>No major interactions detected.</p>
-            )}
-          </Card>
-        )}
-
-        {activeTab === 'recommend' && (
-          <Card title="Medication & Test Recommendations">
-            <Row label="Primary disease" value={recs.primary_disease || '—'} />
-            <Row label="Specialty" value={recs.specialty || '—'} />
-            {recs.description && <Row label="Description" value={recs.description} />}
-            <div>
-              <strong>Suggested medications (from dataset):</strong>
-              <ul style={styles.list}>
-                {(recs.suggested_medications || []).map((m, i) => <li key={i}>{m}</li>)}
-              </ul>
-            </div>
-            <div>
-              <strong>Suggested tests (from dataset):</strong>
-              <ul style={styles.list}>
-                {(recs.suggested_tests || []).map((t, i) => <li key={i}>{t}</li>)}
-              </ul>
-            </div>
-            <Row label="Outcome prediction" value={recs.outcome_prediction || '—'} />
-            <div>
-              <strong>Monitoring plan:</strong>
-              <ul style={styles.list}>
-                {(recs.monitoring_plan || []).map((m, i) => <li key={i}>{m}</li>)}
-              </ul>
-            </div>
-            <Row label="Follow-up" value={recs.follow_up || '—'} />
-          </Card>
-        )}
+              <div>
+                <strong>Suggested tests (from dataset):</strong>
+                <ul style={styles.list}>
+                  {(recs.suggested_tests || []).map((t, i) => <li key={i}>{t}</li>)}
+                </ul>
+              </div>
+              <Row label="Outcome prediction" value={recs.outcome_prediction || '—'} />
+              <div>
+                <strong>Monitoring plan:</strong>
+                <ul style={styles.list}>
+                  {(recs.monitoring_plan || []).map((m, i) => <li key={i}>{m}</li>)}
+                </ul>
+              </div>
+              <Row label="Follow-up" value={recs.follow_up || '—'} />
+            </Card>
+          )}
+        </div>
       </div>
 
       <details style={styles.rawBlock}>
-        <summary>Show raw JSON response</summary>
+        <summary style={{ fontWeight: 600, color: '#0F172A' }}>Show raw JSON response</summary>
         <pre style={styles.pre}>{JSON.stringify(results, null, 2)}</pre>
       </details>
     </section>
   );
 };
 
+// ---------- Helper Components (unchanged) ----------
 const Card = ({ title, children }) => (
   <div style={styles.card}>
     <h3 style={styles.cardTitle}>{title}</h3>
@@ -442,214 +706,11 @@ const Row = ({ label, value }) => (
 );
 
 const SummaryCard = ({ label, value, sub, color }) => (
-  <div style={{ ...styles.summaryCard, borderTop: `3px solid ${color}` }}>
+  <div className="summary-card" style={{ borderTop: `4px solid ${color}` }}>
     <div style={{ ...styles.summaryValue, color }}>{value}</div>
     <div style={styles.summaryLabel}>{label}</div>
     {sub && <div style={styles.summarySub}>{sub}</div>}
   </div>
 );
-
-const styles = {
-  container: {
-    minHeight: '100vh',
-    background: 'linear-gradient(135deg, #F8FAFC 0%, #EFF6FF 100%)',
-    fontFamily: "'Poppins', -apple-system, BlinkMacSystemFont, sans-serif",
-    color: '#1F2937',
-  },
-  header: {
-    background: 'linear-gradient(135deg, #0F766E 0%, #10B981 100%)',
-    color: 'white',
-    padding: '56px 20px',
-    textAlign: 'center',
-  },
-  headerContent: { maxWidth: '960px', margin: '0 auto' },
-  badge: {
-    display: 'inline-block',
-    background: 'rgba(255,255,255,0.18)',
-    color: 'white',
-    padding: '6px 14px',
-    borderRadius: '20px',
-    fontSize: '12px',
-    fontWeight: 600,
-    marginBottom: '16px',
-  },
-  title: {
-    margin: '0 0 12px 0',
-    fontSize: '44px',
-    fontWeight: 700,
-    letterSpacing: '-0.5px',
-  },
-  subtitle: { margin: 0, fontSize: '15px', opacity: 0.9 },
-  content: { maxWidth: '1100px', margin: '0 auto', padding: '40px 20px' },
-  section: {
-    background: 'white',
-    borderRadius: '16px',
-    padding: '32px',
-    marginBottom: '24px',
-    boxShadow: '0 4px 20px rgba(0,0,0,0.06)',
-  },
-  sectionTitle: { marginTop: 0, fontSize: '24px', fontWeight: 700 },
-  sectionSubtitle: { marginTop: 0, color: '#6B7280', fontSize: '14px' },
-  code: { background: '#F3F4F6', padding: '2px 6px', borderRadius: '4px', fontSize: '12px' },
-
-  examplesRow: { display: 'flex', gap: '8px', alignItems: 'center', flexWrap: 'wrap', marginBottom: '20px' },
-  examplesLabel: { color: '#6B7280', fontSize: '13px', fontWeight: 600 },
-  exampleButton: {
-    background: '#ECFDF5',
-    color: '#059669',
-    border: '1px solid #A7F3D0',
-    borderRadius: '999px',
-    padding: '6px 14px',
-    fontSize: '12px',
-    cursor: 'pointer',
-    fontWeight: 600,
-  },
-
-  inputGroup: { marginBottom: '18px', position: 'relative' },
-  label: { display: 'block', marginBottom: '6px', fontWeight: 600, fontSize: '14px', color: '#374151' },
-  input: {
-    width: '100%',
-    padding: '12px 14px',
-    border: '1.5px solid #E5E7EB',
-    borderRadius: '10px',
-    fontSize: '14px',
-    boxSizing: 'border-box',
-    background: '#FAFBFC',
-  },
-  textarea: {
-    width: '100%',
-    padding: '12px 14px',
-    border: '1.5px solid #E5E7EB',
-    borderRadius: '10px',
-    fontFamily: "'Courier New', monospace",
-    fontSize: '13px',
-    lineHeight: 1.5,
-    minHeight: '80px',
-    resize: 'vertical',
-    boxSizing: 'border-box',
-    background: '#FAFBFC',
-  },
-  suggestions: {
-    position: 'absolute',
-    top: '100%',
-    left: 0,
-    right: 0,
-    background: 'white',
-    border: '1px solid #E5E7EB',
-    borderRadius: '10px',
-    marginTop: '4px',
-    zIndex: 10,
-    boxShadow: '0 4px 20px rgba(0,0,0,0.08)',
-    maxHeight: '260px',
-    overflowY: 'auto',
-  },
-  suggestionItem: {
-    display: 'flex',
-    justifyContent: 'space-between',
-    width: '100%',
-    padding: '10px 14px',
-    background: 'none',
-    border: 'none',
-    borderBottom: '1px solid #F3F4F6',
-    textAlign: 'left',
-    cursor: 'pointer',
-    fontSize: '14px',
-    color: '#1F2937',
-  },
-  suggestionMeta: { color: '#6B7280', fontSize: '12px' },
-
-  actionBar: { display: 'flex', gap: '12px', alignItems: 'center', marginTop: '20px' },
-  button: {
-    background: 'linear-gradient(135deg, #10B981 0%, #059669 100%)',
-    color: 'white',
-    border: 'none',
-    padding: '12px 24px',
-    borderRadius: '10px',
-    fontSize: '15px',
-    fontWeight: 600,
-    cursor: 'pointer',
-    boxShadow: '0 4px 12px rgba(16,185,129,0.3)',
-  },
-  secondaryButton: {
-    background: '#F3F4F6',
-    color: '#6B7280',
-    border: '1.5px solid #E5E7EB',
-    padding: '11px 22px',
-    borderRadius: '10px',
-    fontSize: '14px',
-    fontWeight: 600,
-    cursor: 'pointer',
-  },
-  errorBox: {
-    background: '#FEF2F2',
-    color: '#991B1B',
-    border: '1px solid #FCA5A5',
-    padding: '12px 14px',
-    borderRadius: '10px',
-    marginTop: '16px',
-    fontSize: '14px',
-  },
-
-  summaryHeader: {
-    display: 'grid',
-    gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))',
-    gap: '12px',
-    marginBottom: '24px',
-  },
-  summaryCard: {
-    background: '#F9FAFB',
-    padding: '16px',
-    borderRadius: '10px',
-    textAlign: 'center',
-  },
-  summaryValue: { fontSize: '20px', fontWeight: 700, marginBottom: '4px' },
-  summaryLabel: { fontSize: '12px', color: '#6B7280', fontWeight: 600 },
-  summarySub: { fontSize: '11px', color: '#9CA3AF', marginTop: '2px' },
-
-  tabs: {
-    display: 'flex',
-    borderBottom: '2px solid #E5E7EB',
-    gap: '8px',
-    marginBottom: '20px',
-    overflowX: 'auto',
-  },
-  tab: {
-    background: 'none',
-    border: 'none',
-    padding: '12px 16px',
-    cursor: 'pointer',
-    fontSize: '14px',
-    fontWeight: 600,
-    borderBottom: '3px solid transparent',
-    whiteSpace: 'nowrap',
-  },
-  tabContent: { animation: 'fadeInUp 0.3s ease-out' },
-
-  card: {
-    background: '#F9FAFB',
-    padding: '20px',
-    borderRadius: '12px',
-    border: '1px solid #E5E7EB',
-    borderLeft: '4px solid #10B981',
-  },
-  cardTitle: { margin: '0 0 12px 0', fontSize: '16px', fontWeight: 700 },
-  row: { display: 'flex', gap: '12px', padding: '6px 0', borderBottom: '1px dashed #E5E7EB' },
-  rowLabel: { width: '180px', color: '#6B7280', fontSize: '13px', fontWeight: 600 },
-  rowValue: { flex: 1, color: '#1F2937', fontSize: '14px' },
-  list: { margin: '6px 0 6px 20px', padding: 0, color: '#374151', fontSize: '14px' },
-
-  rawBlock: { marginTop: '16px' },
-  pre: {
-    background: 'white',
-    padding: '12px',
-    borderRadius: '8px',
-    overflow: 'auto',
-    fontSize: '12px',
-    lineHeight: 1.5,
-    border: '1px solid #E5E7EB',
-    color: '#374151',
-  },
-  footer: { textAlign: 'center', padding: '24px', color: '#6B7280', fontSize: '13px' },
-};
 
 export default Dashboard;
